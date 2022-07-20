@@ -57,7 +57,7 @@ public class ProductService {
 
     public List<Product> getAllProductByValue(Long greaterThan, Long lessThan) throws ExecutionException, InterruptedException {
         Firestore dbFirestore = FirestoreClient.getFirestore();
-        Query future = dbFirestore.collection(COL_NAME).whereGreaterThan("price1",String.valueOf(greaterThan)).whereLessThan("price1",String.valueOf(lessThan));
+        Query future = dbFirestore.collection(COL_NAME).whereGreaterThan("price1",greaterThan).whereLessThan("price1",lessThan);
         ApiFuture<QuerySnapshot> querySnapshotApiFuture = future.get();
         List<QueryDocumentSnapshot> documents = querySnapshotApiFuture.get().getDocuments();
 

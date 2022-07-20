@@ -1,8 +1,6 @@
 package com.example.Product_Management.Entity;
 
 public class Product {
-
-
     private String group;
     private String barcode;
     private String category;
@@ -10,15 +8,15 @@ public class Product {
     private String itemName;
     private String imageUrl;
     private String type;
-    private String price1;
-    private String qty1;
-    private String mrp1;
+    private Long price1;
+    private Long qty1;
+    private Long mrp1;
     private String unit1;
 
     public Product() {
     }
 
-    public Product(String group, String barcode, String category, String subCategory, String itemName, String imageUrl, String type, String price1, String qty1, String mrp1, String unit1) {
+    public Product(String group, String barcode, String category, String subCategory, String itemName, String imageUrl, String type, Long price1, Long qty1, Long mrp1, String unit1) {
         this.group = group;
         this.barcode = barcode;
         this.category = category;
@@ -88,27 +86,27 @@ public class Product {
         this.type = type;
     }
 
-    public String getPrice1() {
+    public Long getPrice1() {
         return price1;
     }
 
-    public void setPrice1(String price1) {
+    public void setPrice1(Long price1) {
         this.price1 = price1;
     }
 
-    public String getQty1() {
+    public Long getQty1() {
         return qty1;
     }
 
-    public void setQty1(String qty1) {
+    public void setQty1(Long qty1) {
         this.qty1 = qty1;
     }
 
-    public String getMrp1() {
+    public Long getMrp1() {
         return mrp1;
     }
 
-    public void setMrp1(String mrp1) {
+    public void setMrp1(Long mrp1) {
         this.mrp1 = mrp1;
     }
 
@@ -120,7 +118,6 @@ public class Product {
         this.unit1 = unit1;
     }
 
-
     @Override
     public String toString() {
         return "Product{" +
@@ -131,9 +128,9 @@ public class Product {
                 ", itemName='" + itemName + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", type='" + type + '\'' +
-                ", price1='" + price1 + '\'' +
-                ", qty1='" + qty1 + '\'' +
-                ", mrp1='" + mrp1 + '\'' +
+                ", price1=" + price1 +
+                ", qty1=" + qty1 +
+                ", mrp1=" + mrp1 +
                 ", unit1='" + unit1 + '\'' +
                 '}';
     }
